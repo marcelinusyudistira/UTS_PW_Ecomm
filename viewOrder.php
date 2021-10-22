@@ -127,6 +127,7 @@
 <body>
     <?php include 'partials/dbConnect.php';?>
     <?php include 'partials/navbar.php';?>
+    <br><br><br>
     <?php 
     if($loggedin){
     ?>
