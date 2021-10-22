@@ -31,8 +31,8 @@
 </head>
 
 <body>
-  <?php include 'partials/dbconnect.php';?>
-  <?php include 'partials/nav.php';?>
+  <?php include 'partials/dbConnect.php';?>
+  <?php include 'partials/navbar.php';?>
 
   <!-- ======= Carousel Section ======= -->
   <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
