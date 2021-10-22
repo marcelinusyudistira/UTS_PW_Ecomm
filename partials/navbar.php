@@ -16,7 +16,7 @@ $row = mysqli_fetch_assoc($result);
 
 $systemName = $row['sistemName'];
 
-echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a href="index.php" class="scrollto"><img src="img/nav-logo1.png" alt="" title=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
