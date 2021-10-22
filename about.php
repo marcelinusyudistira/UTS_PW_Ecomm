@@ -234,9 +234,9 @@
                   <h4>Nico Nathanael </h4>
                 </div>
                 <div class="social">
-                  <a href=""><i class="icofont-twitter" target="_blank"></i></a>
-                  <a href="https://" target="_blank"><i class="fab fa-github"></i></a>
-                  <a href=""><i class="icofont-linkedin" target="_blank"></i></a>
+                  <a href="https://instagram.com/tribalofvivaldy"><i class="icofont-instagran" target="_blank"></i></a>
+                  <a href="https://github.com/Riitsu" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.facebook.com/niconathanaels/"><i class="icofont-facebook" target="_blank"></i></a>
                 </div>
               </div>
             </div>
@@ -250,9 +250,9 @@
                   <h4>Marcellinus Yoga</h4>
                 </div>
                 <div class="social">
-                  <a href=""><i class="icofont-twitter" target="_blank"></i></a>
-                  <a href="https://" target="_blank"><i class="fab fa-github"></i></a>
-                  <a href=""><i class="icofont-linkedin" target="_blank"></i></a>
+                  <a href="https://instagram.com/marcelinus.yoga"><i class="icofont-instagram" target="_blank"></i></a>
+                  <a href="https://github.com/marcelinusyudistira" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://www.facebook.com/marcelinus.yoga.54"><i class="icofont-facebook" target="_blank"></i></a>
                 </div>
               </div>
             </div>
