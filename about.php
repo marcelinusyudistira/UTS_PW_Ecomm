@@ -31,8 +31,8 @@
 </head>
 
 <body>
-  <?php include 'partials/dbconnect.php';?>
-  <?php include 'partials/nav.php';?>
+  <?php include 'partials/dbConnect.php';?>
+  <?php include 'partials/navbar.php';?>
 
   <!-- ======= Carousel Section ======= -->
   <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -218,7 +218,7 @@
                 </div>
                 <div class="social">
                   <a href="https://" target="_blank"><i class="icofont-twitter"></i></a>
-                  <a href="https://" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://github.com/ChNeville" target="_blank"><i class="fab fa-github"></i></a>
                   <a href="https://" target="_blank"><i class="icofont-linkedin"
                       target="_blank"></i></a>
                 </div>
@@ -234,7 +234,7 @@
                   <h4>Nico Nathanael </h4>
                 </div>
                 <div class="social">
-                  <a href="https://instagram.com/tribalofvivaldy"><i class="icofont-instagran" target="_blank"></i></a>
+                  <a href="https://instagram.com/tribalofvivaldy"><i class="icofont-instagram" target="_blank"></i></a>
                   <a href="https://github.com/Riitsu" target="_blank"><i class="fab fa-github"></i></a>
                   <a href="https://www.facebook.com/niconathanaels/"><i class="icofont-facebook" target="_blank"></i></a>
                 </div>
