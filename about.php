@@ -27,7 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -50,7 +49,7 @@
           <img src="assets/img/slide/slide-1.jpg" alt="" class="d-block w-100">
         <div class="carousel-container">
           <div class="carousel-content">
-            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>E-Commerce</span></h2>
+            <h2 class="animate__animated animate__fadeInDown">Berbelanja<span> dengan mudah di Tumbas</span></h2>
             <a href="index.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
           </div>
         </div>
@@ -60,8 +59,8 @@
           <img src="assets/img/slide/slide-2.jpg" alt="" class="d-block w-100">
         <div class="carousel-container">
           <div class="carousel-content">
-            <h2 class="animate__animated animate__fadeInDown mb-0">Our Mission</h2>
-            <p class="animate__animated animate__fadeInUp">To Bring You Happiness</p>
+            <h2 class="animate__animated animate__fadeInDown mb-0">Misi Kami</h2>
+            <p class="animate__animated animate__fadeInUp">Memberikan kemudahan dalam berbelanja kebutuhan sehari-hari</p>
             <a href="index.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
           </div>
         </div>
@@ -71,8 +70,8 @@
           <img src="assets/img/slide/slide-3.jpg" alt="" class="d-block w-100">
         <div class="carousel-container">
           <div class="carousel-content">
-            <h2 class="animate__animated animate__fadeInDown mb-0">AAAAAAAAAAAAAA</h2>
-            <p>BBBBBB <a href="" target="_blank"></a></p>
+            <h2 class="animate__animated animate__fadeInDown mb-0">Praktis, Lengkap, dan Efisien</h2>
+            <p>Semua kebutuhan anda telah disediakan lengkap pada platform kami<a href="" target="_blank"></a></p>
             <a href="index.php" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
           </div>
         </div>
@@ -164,7 +163,7 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="icofont-simple-smile"></i>
-              <span data-toggle="counter-up">2931</span>
+              <span data-toggle="counter-up">6961</span>
               <p><strong>Happy Customers</strong></p>
             </div>
           </div>
@@ -172,7 +171,7 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="icofont-document-folder"></i>
-              <span data-toggle="counter-up">14930</span>
+              <span data-toggle="counter-up">16779</span>
               <p><strong>Items Delivered</strong></p>
             </div>
           </div>
@@ -180,7 +179,7 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="icofont-live-support"></i>
-              <span data-toggle="counter-up">2481</span>
+              <span data-toggle="counter-up">2781</span>
               <p><strong>Hours Of Support</strong></p>
             </div>
           </div>
@@ -188,7 +187,7 @@
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
               <i class="icofont-users-alt-5"></i>
-              <span data-toggle="counter-up">35</span>
+              <span data-toggle="counter-up">45</span>
               <p><strong>Hard Workers</strong></p>
             </div>
           </div>
@@ -218,7 +217,7 @@
                 </div>
                 <div class="social">
                   <a href="https://" target="_blank"><i class="icofont-twitter"></i></a>
-                  <a href="https://" target="_blank"><i class="fab fa-github"></i></a>
+                  <a href="https://github.com/ChNeville" target="_blank"><i class="fab fa-github"></i></a>
                   <a href="https://" target="_blank"><i class="icofont-linkedin"
                       target="_blank"></i></a>
                 </div>
@@ -234,7 +233,7 @@
                   <h4>Nico Nathanael </h4>
                 </div>
                 <div class="social">
-                  <a href="https://instagram.com/tribalofvivaldy"><i class="icofont-instagran" target="_blank"></i></a>
+                  <a href="https://instagram.com/tribalofvivaldy"><i class="icofont-instagram" target="_blank"></i></a>
                   <a href="https://github.com/Riitsu" target="_blank"><i class="fab fa-github"></i></a>
                   <a href="https://www.facebook.com/niconathanaels/"><i class="icofont-facebook" target="_blank"></i></a>
                 </div>

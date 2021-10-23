@@ -50,7 +50,7 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           </li>
           
         </ul>
-        <form method="get" action="/OnlinePizzaDelivery/search.php" class="navbar-nav ms-auto">
+        <form method="get" action="/PW_UTS_Ecomm/search.php" class="navbar-nav ms-auto">
         
           <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search" required>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -91,3 +91,32 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             
   echo '</div>
     </nav>';
+
+    include 'partials/loginModal.php';
+    include 'partials/signupModal.php';
+
+    if(isset($_GET['signupsuccess']) && $_GET['signupsuccess']=="true") {
+      echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Success!</strong> You can now login.
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+            </div>';
+    }
+    if(isset($_GET['error']) && $_GET['signupsuccess']=="false") {
+      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Warning!</strong> ' .$_GET['error']. '
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+            </div>';
+    }
+    if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="true"){
+      echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Success!</strong> You are logged in
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+            </div>';
+    }
+    if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="false"){
+      echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Warning!</strong> Invalid Credentials
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+            </div>';
+    }
+?>
