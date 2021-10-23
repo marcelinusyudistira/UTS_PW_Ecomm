@@ -32,7 +32,7 @@
 
 <body>
   <?php include 'partials/dbConnect.php';?>
-  <?php include 'partials/navbar.php';?>
+  <?php require 'partials/navbar.php';?>
 
   <!-- ======= Carousel Section ======= -->
   <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">

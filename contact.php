@@ -122,7 +122,7 @@
   </head>
   <body>
   <?php include 'partials/dbConnect.php';?>
-  <?php include 'partials/navbar.php';?>
+  <?php require 'partials/navbar.php';?>
 
       <div class="contact2" style="background-image:url(img/map.jpg);height: 400px;" id="contact">
         <div class="container">

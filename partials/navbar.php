@@ -35,7 +35,7 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             $sql = "SELECT categoryName, categoryId FROM `categories`"; 
             $result = mysqli_query($conn, $sql);
             while($row = mysqli_fetch_assoc($result)){
-              echo '<a class="dropdown-item" href="viewPizzaList.php?catid=' .$row['categoryId']. '">' .$row['categoryName']. '</a>';
+              echo '<a class="dropdown-item" href="viewItemList.php?catid=' .$row['categoryId']. '">' .$row['categoryName']. '</a>';
             }
             echo '</div>
           </li>
@@ -75,7 +75,7 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"> Welcome ' .$username. '</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="partials/_logout.php">Logout</a>
+                <a class="dropdown-item" href="partials/logout.php">Logout</a>
               </div>
             </li>
           </ul>
