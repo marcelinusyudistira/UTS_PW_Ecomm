@@ -16,8 +16,8 @@ $row = mysqli_fetch_assoc($result);
 
 $systemName = $row['sistemName'];
 
-echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <a href="index.php" class="scrollto"><img src="img/nav-logo1.png" alt="" title=""></a>
+echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+    <a href="index.php" class="scrollto" style="margin-left: 30px"><img src="img/logo1.png" alt="" title="" width="120px" height="40px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,7 +53,7 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <form method="get" action="/PW_UTS_Ecomm/search.php" class="navbar-nav ms-auto">
         
           <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search" required>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
         </form>';
 
         $countsql = "SELECT SUM(`itemQuantity`) FROM `viewcart` WHERE `userId`=$userId"; 

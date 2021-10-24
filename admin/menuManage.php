@@ -92,7 +92,7 @@
                                                 <p>Price : <b>' .$itemPrice. '</b></p>
                                             </td>
                                             <td class="text-center">
-												<div class="row mx-auto" style="width:112px">
+												<div class="=d-grid gap-2 d-md-flex" style="width:100px; margin-left:18px;">
 													<button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#updateItem' .$itemId. '">Edit</button>
 													<form action="partials/menuManage.php" method="POST">
 														<button name="removeItem" class="btn btn-sm btn-danger" style="margin-left:9px;">Delete</button>

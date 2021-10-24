@@ -21,6 +21,18 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            }
+    </style>
 </head>
 <body>
 
@@ -36,7 +48,7 @@
               <strong>Info!</strong> online payment are currently disabled so please choose cash on delivery.
             </div>
             <div class="col-lg-12 text-center border rounded bg-light my-3">
-                <h1>My Cart</h1>
+                <h1>Keranjang Saya</h1>
             </div>
             <div class="col-lg-8">
                 <div class="card wish-list mb-3">
@@ -44,13 +56,13 @@
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">No.</th>
-                                <th scope="col">Item Name</th>
-                                <th scope="col">Item Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total Price</th>
+                                <th scope="col">Nama Barang</th>
+                                <th scope="col">Harga Barang</th>
+                                <th scope="col">Jumlah</th>
+                                <th scope="col">Total Harga</th>
                                 <th scope="col">
                                     <form action="partials/manageCart.php" method="POST">
-                                        <button name="removeAllItem" class="btn btn-sm btn-outline-danger">Remove All</button>
+                                        <button name="removeAllItem" class="btn btn-sm btn-outline-danger">Hapus Semua</button>
                                         <input type="hidden" name="userId" value="<?php $userId = $_SESSION['userId']; echo $userId ?>">
                                     </form>
                                 </th>
@@ -80,21 +92,21 @@
                                             <td>' . $itemPrice . '</td>
                                             <td>
                                                 <form id="frm' . $itemId . '">
-                                                    <input type="hidden" name="pizzaId" value="' . $itemId . '">
+                                                    <input type="hidden" name="itemId" value="' . $itemId . '">
                                                     <input type="number" name="quantity" value="' . $Quantity . '" class="text-center" onchange="updateCart(' . $itemId . ')" onkeyup="return false" style="width:60px" min=1 oninput="check(this)" onClick="this.select();">
                                                 </form>
                                             </td>
                                             <td>' . $total . '</td>
                                             <td>
                                                 <form action="partials/manageCart.php" method="POST">
-                                                    <button name="removeItem" class="btn btn-sm btn-outline-danger">Remove</button>
+                                                    <button name="removeItem" class="btn btn-sm btn-outline-danger">Hapus</button>
                                                     <input type="hidden" name="itemId" value="'.$itemId. '">
                                                 </form>
                                             </td>
                                         </tr>';
                                 }
                                 if($counter==0) {
-                                    ?><script> document.getElementById("cont").innerHTML = '<div class="col-md-12 my-5"><div class="card"><div class="card-body cart"><div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3"><h3><strong>Your Cart is Empty</strong></h3><h4>Add something to make me happy :)</h4> <a href="index.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a> </div></div></div></div>';</script> <?php
+                                    ?><script> document.getElementById("cont").innerHTML = '<div class="col-md-12 my-5"><br><br><div class="card"><div class="card-body cart"><div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3"><h3><strong>Keranjangmu masih kosong</strong></h3><h4>Silahkan untuk mengorder barang terlebih dahulu</h4> <a href="index.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a> </div></div></div></div>';</script> <?php
                                 }
                             ?>
                         </tbody>
@@ -106,14 +118,14 @@
                     <div class="pt-4 border bg-light rounded p-3">
                         <h5 class="mb-3 text-uppercase font-weight-bold text-center">Order summary</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 bg-light">Total Price<span>Rp. <?php echo $totalPrice ?></span></li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-light">Shipping<span>Rp. 0</span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0 bg-light">Total Harga<span>Rp. <?php echo $totalPrice ?></span></li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center px-0 bg-light">Biaya kirim<span>Rp. 0</span></li>
                             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3 bg-light">
                                 <div>
-                                    <strong>The total amount of</strong>
-                                    <strong><p class="mb-0">(including Tax & Charge)</p></strong>
+                                    <strong>Total Biaya</strong>
+                                    <strong><p class="mb-0">(Termasuk Pajak)</p></strong>
                                 </div>
-                                <span><strong>Rs. <?php echo $totalPrice ?></strong></span>
+                                <span><strong>Rp. <?php echo $totalPrice ?></strong></span>
                             </li>
                         </ul>
                         <div class="form-check">
@@ -125,7 +137,7 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault1" disabled>
                             <label class="form-check-label" for="flexRadioDefault1">
-                                Online Payment 
+                                Pembayaran Online 
                             </label>
                         </div><br>
                         <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#checkoutModal">go to checkout</button>
@@ -166,18 +178,10 @@
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>         
     <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
 
     <script>
         function check(input) {
