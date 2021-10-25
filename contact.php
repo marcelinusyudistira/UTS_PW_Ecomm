@@ -153,8 +153,8 @@
                           $passSql = "SELECT * FROM users WHERE id='$userId'"; 
                           $passResult = mysqli_query($conn, $passSql);
                           $passRow=mysqli_fetch_assoc($passResult);
-                          $email = $passRow['email'];
-                          $phone = $passRow['phone'];
+                          $email = isset($passRow['email']) ? $passRow['email'] : '';
+                          $phone = isset($passRow['phone']) ? $passRow['phone'] : '';
                           
                       ?>
                       <form action="partials/manageContactUs.php" method="POST">
@@ -170,7 +170,7 @@
                                 <b><label for="phone">Nomor HP:</label></b>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                      <span class="input-group-text" id="basic-addon">+91</span>
+                                      <span class="input-group-text" id="basic-addon">+62</span>
                                     </div>
                                     <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="basic-addon" placeholder="Enter Your Phone Number" required pattern="[0-9]{10}" value="<?php echo $phone ?>">
                                 </div>
@@ -202,7 +202,7 @@
                           <?php }else { ?>
                             <div class="col-lg-12">
                               <button type="submit" class="btn btn-danger-gradiant mt-3 text-white border-0 py-2 px-3" disabled><span> KIRIM <i class="ti-arrow-right"></i></span></button>
-                              <small class="form-text text-muted">First login to Contct with Us.</small>
+                              <small class="form-text text-muted">Login first to Contact with Us.</small>
                             </div>
                           <?php } ?>
                         </div>
