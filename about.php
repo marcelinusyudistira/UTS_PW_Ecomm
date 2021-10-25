@@ -96,8 +96,8 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <h3>Welcome to <strong>E-commerce</strong></h3>
-            <h3><strong>We bring WorldWide Product to Your Hands</strong></h3>
+            <h3>Selamat Datang di <strong>Tumbas</strong></h3>
+            <h3><strong>Sebuah E-Commerce karya anak desa</strong></h3>
             <p class="font-italic">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
