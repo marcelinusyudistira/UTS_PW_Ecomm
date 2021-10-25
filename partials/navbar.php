@@ -50,7 +50,7 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
           </li>
           
         </ul>
-        <form method="get" action="/PW_UTS_Ecomm/search.php" class="navbar-nav ms-auto">
+        <form method="get" action="./search.php" class="navbar-nav ms-auto">
         
           <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search" required>
           <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
