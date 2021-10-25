@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $result = mysqli_query($conn, $existSql);
     $numExistRows = mysqli_num_rows($result);
     if($numExistRows > 0){
-        $showError = "Username Already Exists";
+        $showError = "Username sudah pernah digunakan";
         header("Location: /PW_UTS_Ecomm/index.php?signupsuccess=false&error=$showError");
     }
     else{
