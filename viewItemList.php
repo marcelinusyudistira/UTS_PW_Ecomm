@@ -96,8 +96,8 @@
             if($noResult) {
                 echo '<div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <p class="display-4">Sorry In this category No items available.</p>
-                        <p class="lead"> We will update Soon.</p>
+                        <p class="display-4">Belum ada barang yang tersedia pada kategori ini.</p>
+                        <p class="lead">Kami akan mengupdatenya dikemudian hari.</p>
                     </div>
                 </div> ';
             }

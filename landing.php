@@ -23,7 +23,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container px-5">
-                <a class="navbar-brand" href="#page-top"><img src="img/nav-logo.png" alt="" title=""></a>
+                <a class="navbar-brand" href="#page-top"><img src="img/logo1.png" alt="" title="" width="120px" height="40px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
@@ -103,7 +103,7 @@
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; PAW C 2021</p></div>
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright © 2021 Designed by Nico, Marcel, & Nevile</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"

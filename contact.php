@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link rel="icon" href="img/logo.png" type="image/x-icon">
@@ -167,7 +167,7 @@
                           </div>
                           <div class="col-lg-6">
                             <div class="form-group mt-3">
-                                <b><label for="phone">Phone No:</label></b>
+                                <b><label for="phone">Nomor HP:</label></b>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                       <span class="input-group-text" id="basic-addon">+91</span>
@@ -180,7 +180,7 @@
                             <div class="form-group mt-3">
                               <b><label for="orderId">Order Id:</label></b>
                               <input class="form-control" type="text" id="orderId" name="orderId" placeholder="Order Id" value="0">
-                              <small id="orderIdHelp" class="form-text text-muted">If your problem is not related to the order(order id = 0).</small>
+                              <small id="orderIdHelp" class="form-text text-muted"></small>
                             </div>
                           </div>
                           <div class="col-lg-6">
@@ -191,17 +191,17 @@
                           </div>
                           <div class="col-lg-12">
                             <div class="form-group  mt-3">
-                                <textarea class="form-control" id="message" name="message" rows="2" required minlength="6" placeholder="How May We Help You ?"></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="2" required minlength="6" placeholder="Apa yang bisa saya bantu?"></textarea>
                             </div>
                           </div>
                           <?php if($loggedin){ ?>
                             <div class="col-lg-12">
-                              <button type="submit" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3"><span> SUBMIT NOW <i class="ti-arrow-right"></i></span></button>
+                              <button type="submit" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3"><span> KIRIM <i class="ti-arrow-right"></i></span></button>
                               <button type="button" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3 mx-2" data-toggle="modal" data-target="#history"><span> HISTORY <i class="ti-arrow-right"></i></span></button>
                             </div>
                           <?php }else { ?>
                             <div class="col-lg-12">
-                              <button type="submit" class="btn btn-danger-gradiant mt-3 text-white border-0 py-2 px-3" disabled><span> SUBMIT NOW <i class="ti-arrow-right"></i></span></button>
+                              <button type="submit" class="btn btn-danger-gradiant mt-3 text-white border-0 py-2 px-3" disabled><span> KIRIM <i class="ti-arrow-right"></i></span></button>
                               <small class="form-text text-muted">First login to Contct with Us.</small>
                             </div>
                           <?php } ?>
@@ -222,9 +222,9 @@
 
                     echo '<div class="col-lg-4 bg-image" style="background-image:url(img/contact.jpg)">
                           <div class="detail-box p-4">
-                            <h5 class="text-white font-weight-light mb-3">ADDRESS</h5>
+                            <h5 class="text-white font-weight-light mb-3">ALAMAT</h5>
                             <p class="text-white op-7">' .$address. '</p>
-                            <h5 class="text-white font-weight-light mb-3 mt-4">CALL US</h5>
+                            <h5 class="text-white font-weight-light mb-3 mt-4">TELEPON</h5>
                             <p class="text-white op-7">' .$contact1. '
                                 <br> ' .$contact2. '</p>
                             <div class="round-social light">
@@ -341,22 +341,12 @@
 
   <?php include 'partials/footer.php';?> 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
-  </script>
-  <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>  
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>         
+    <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
   
   </body>
 </html>
