@@ -20,18 +20,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $uploadfile = $uploaddir . $newfilename;
 
                 if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
-                    echo "<script>alert('success');
+                    echo "<script>alert('berhasil menambahkan kategori');
                             window.location=document.referrer;
                         </script>";
                 } else {
-                    echo "<script>alert('failed to upload image');
+                    echo "<script>alert('Gagal mengupload foto');
                             window.location=document.referrer;
                         </script>";
                 }
 
             }
             else{
-                echo '<script>alert("Please select an image file to upload.");
+                echo '<script>alert("Silahkan memilih foto untuk diupload");
                     </script>';
             }
         }
@@ -45,12 +45,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             if (file_exists($filename)) {
                 unlink($filename);
             }
-            echo "<script>alert('Removed');
+            echo "<script>alert('Berhasil menghapus kategori');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Gagal menghapus kategori');
                 window.location=document.referrer;
                 </script>";
         }
@@ -63,12 +63,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `categories` SET `categoryName`='$catName', `categoryDesc`='$catDesc' WHERE `categoryId`='$catId'";   
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "<script>alert('update');
+            echo "<script>alert('Berhasil mengupdate kategori');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Gagal mengupdate kategori');
                 window.location=document.referrer;
                 </script>";
         }
@@ -84,17 +84,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $uploadfile = $uploaddir . $newfilename;
 
             if (move_uploaded_file($_FILES['catimage']['tmp_name'], $uploadfile)) {
-                echo "<script>alert('success');
+                echo "<script>alert('Berhasil mengupdate foto');
                         window.location=document.referrer;
                     </script>";
             } else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Gagal mengupdate foto');
                         window.location=document.referrer;
                     </script>";
             }
         }
         else{
-            echo '<script>alert("Please select an image file to upload.");
+            echo '<script>alert("Silahkan memilih foto untuk diupload");
             window.location=document.referrer;
                 </script>';
         }

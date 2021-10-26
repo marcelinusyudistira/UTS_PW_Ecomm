@@ -1,6 +1,6 @@
-<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%" id='notempty'>
-    <strong>Info!</strong> If problem is not related to the order then order id = 0	
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>Perhatian!</strong> Jika masalah tidak berkaitan dengan order manapun maka order id bernilai 0
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <style>
     .btn-danger-gradiant {
@@ -12,7 +12,7 @@
     }
 </style>
 <div style="margin-right: 32px;display: table;margin-left: auto;">
-<button type="button" class="btn btn-danger-gradiant text-white border-0 py-2 px-3 mx-2" data-toggle="modal" data-target="#history"><span> HISTORY <i class="ti-arrow-right"></i></span></button>
+<button type="button" class="btn btn-danger-gradiant text-white border-0 py-2 px-3 mx-2" data-bs-toggle="modal" data-bs-target="#history"><span> HISTORY <i class="ti-arrow-right"></i></span></button>
 </div>
 <div class="container-fluid" id='empty'>	
 	<div class="row">
@@ -55,7 +55,7 @@
                                         <td>' .$message. '</td>
                                         <td>' .$time. '</td>
                                         <td class="text-center">
-                                            <button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#reply' .$contactId. '">Reply</button>
+                                            <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#reply' .$contactId. '">Reply</button>
                                         </td>
                                     </tr>';
                             }
@@ -87,7 +87,7 @@
         <div class="modal-content">
           <div class="modal-header" style="background-color: rgb(111 202 203);">
             <h5 class="modal-title" id="reply<?php echo $contactId; ?>">Reply (Contact Id: <?php echo $contactId; ?>)</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -116,7 +116,7 @@
           <div class="modal-content">
             <div class="modal-header" style="background-color: rgb(187 188 189);">
               <h5 class="modal-title" id="history">Your Sent Message</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -137,7 +137,7 @@
                     while($row=mysqli_fetch_assoc($result)) {
                         $contactId = $row['contactId'];
                         $message = $row['message'];
-                        $datetime = $row['datetime'];
+                        $datetime = $row['dateTime'];
                         $totalReply++;
 
                         echo '<tr>

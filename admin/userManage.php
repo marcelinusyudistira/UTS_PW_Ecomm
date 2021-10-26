@@ -2,7 +2,7 @@
 	
 	<div class="row">
         <div class="col-lg-12">
-            <button class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#newUser"><i class="fa fa-plus"></i> New user</button>
+            <button class="btn btn-primary float-right btn-sm" data-bs-toggle="modal" data-bs-target="#newUser"><i class="fa fa-plus"></i> New user</button>
         </div>
 	</div>
 	    <br>
@@ -55,7 +55,7 @@
                                         <div class="container">
                                             <div class="row" style="width:80px; margin-left:1px; margin-right:-50px;">
                                                 <div class="col-6">
-                                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editUser' .$Id. '" type="button">Edit</button> </div>';
+                                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editUser' .$Id. '" type="button">Edit</button> </div>';
                                                 if($Id == 1) {
                                                     echo '<div class="col-6">
                                                         <button class="btn btn-sm btn-danger" disabled style="margin-left:9px;">Delete</button>
@@ -88,7 +88,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="newUser">Create New User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -132,11 +132,11 @@
               </div>
               <div class="form-group">
                   <b><label for="password">Password:</label></b>
-                  <input class="form-control" id="password" name="password" placeholder="Enter Password" type="password" required data-toggle="password" minlength="4" maxlength="21">
+                  <input class="form-control" id="password" name="password" placeholder="Enter Password" type="password" required data-bs-toggle="password" minlength="4" maxlength="21">
               </div>
               <div class="form-group">
-                  <b><label for="password1">Renter Password:</label></b>
-                  <input class="form-control" id="cpassword" name="cpassword" placeholder="Renter Password" type="password" required data-toggle="password" minlength="4" maxlength="21">
+                  <b><label for="password1">Confirm Password:</label></b>
+                  <input class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" type="password" required data-bs-toggle="password" minlength="4" maxlength="21">
               </div>
               <button type="submit" name="createUser" class="btn btn-success">Submit</button>
             </form>
@@ -165,30 +165,11 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="editUser<?php echo $Id; ?>">User Id: <b><?php echo $Id; ?></b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
         <div class="modal-body">
-            
-            <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
-                <div class="form-group col-md-8">
-                    <form action="partials/userManage.php" method="post" enctype="multipart/form-data">
-                        <b><label for="image">Profile Picture</label></b>
-                        <input type="file" name="userimage" id="userimage" accept=".jpg" class="form-control" required style="border:none;">
-                        <small id="Info" class="form-text text-muted mx-3">Please .jpg file upload.</small>
-                        <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
-                        <button type="submit" class="btn btn-success mt-3" name="updateProfilePhoto">Update Img</button>
-                    </form>         
-                </div>
-                <div class="form-group col-md-4">
-                    <img src="/PW_UTS_Ecomm/img/person-<?php echo $Id; ?>.jpg" alt="Profile Photo" width="100" height="100" onError="this.src ='/PW_UTS_Ecomm/img/profilePic.jpg'">
-                    <form action="partials/userManage.php" method="post">
-                        <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
-                        <button type="submit" class="btn btn-success mt-2" name="removeProfilePhoto">Remove Img</button>
-                    </form>
-                </div>
-            </div>
             
             <form action="partials/userManage.php" method="post">
                 <div class="form-group">
@@ -214,7 +195,7 @@
                         <b><label for="phone">Phone No:</label></b>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon">+91</span>
+                                <span class="input-group-text" id="basic-addon">+62</span>
                             </div>
                             <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $phone; ?>" required pattern="[0-9]{10}" maxlength="10">
                         </div>

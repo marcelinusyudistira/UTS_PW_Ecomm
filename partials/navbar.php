@@ -17,7 +17,7 @@ $row = mysqli_fetch_assoc($result);
 $systemName = $row['sistemName'];
 
 echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-    <a href="index.php" class="scrollto" style="margin-left: 30px"><img src="img/logo1.png" alt="" title="" width="120px" height="40px"></a>
+    <a href="landing.php" class="scrollto" style="margin-left: 30px"><img src="img/logo1.png" alt="" title="" width="120px" height="40px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,7 +50,7 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
           </li>
           
         </ul>
-        <form method="get" action="/PW_UTS_Ecomm/search.php" class="navbar-nav ms-auto">
+        <form method="get" action="./search.php" class="navbar-nav ms-auto">
         
           <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Search" aria-label="Search" required>
           <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
@@ -85,8 +85,8 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
         }
         else {
           echo '
-          <button type="button" class="btn btn-success mx-2"  data-toggle="modal" data-target="#loginModal">Login</button>
-          <button type="button" class="btn btn-success mx-2"  data-toggle="modal" data-target="#signupModal">SignUp</button>';
+          <button type="button" class="btn btn-success mx-2"  data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          <button type="button" class="btn btn-success mx-2"  data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>';
         }
             
   echo '</div>
@@ -97,26 +97,26 @@ echo '<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
 
     if(isset($_GET['signupsuccess']) && $_GET['signupsuccess']=="true") {
       echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Success!</strong> You can now login.
-              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+              <strong>Success!</strong> Sekarang anda bisa login.
+              <button type="button" class="btn-close" data-bs-dismiss="alert"><span aria-hidden="true">×</span></button>
             </div>';
     }
     if(isset($_GET['error']) && $_GET['signupsuccess']=="false") {
       echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
               <strong>Warning!</strong> ' .$_GET['error']. '
-              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"><span aria-hidden="true">×</span></button>
             </div>';
     }
     if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="true"){
       echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Success!</strong> You are logged in
-              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+              <strong>Success!</strong> Anda sudah login
+              <button type="button" class="btn-close" data-bs-dismiss="alert"><span aria-hidden="true">×</span></button>
             </div>';
     }
     if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="false"){
       echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-              <strong>Warning!</strong> Invalid Credentials
-              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+              <strong>Warning!</strong> Masukkan username dan password dengan benar
+              <button type="button" class="btn-close" data-bs-dismiss="alert"><span aria-hidden="true">×</span></button>
             </div>';
     }
 ?>

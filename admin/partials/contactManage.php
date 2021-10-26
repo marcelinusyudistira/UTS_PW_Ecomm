@@ -11,12 +11,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO `contactreply` (`contactId`, `userId`, `message`, `datetime`) VALUES ('$contactId', '$userId', '$message', current_timestamp())";   
         $result = mysqli_query($conn, $sql);
         if($result) {
-            echo "<script>alert('success');
+            echo "<script>alert('Berhasil menambahkan reply');
                     window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Gagal menambahkan reply');
                     window.location=document.referrer;
                 </script>";
         }

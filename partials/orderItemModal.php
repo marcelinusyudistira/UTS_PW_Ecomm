@@ -12,7 +12,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="orderItem<?php echo $orderid; ?>">Order Items</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -54,7 +54,7 @@
                                                     <div class="p-2">
                                                     <img src="img/item-'.$itemId. '.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                     <div class="ml-3 d-inline-block align-middle">
-                                                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">'.$itemName. '</a></h5><span class="text-muted font-weight-normal font-italic d-block">Rs. ' .$itemPrice. '/-</span>
+                                                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">'.$itemName. '</a></h5><span class="text-muted font-weight-normal font-italic d-block">Rp. ' .$itemPrice. '/-</span>
                                                     </div>
                                                     </div>
                                                 </th>

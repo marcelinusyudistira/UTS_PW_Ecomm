@@ -93,7 +93,7 @@
                                             </td>
                                             <td class="text-center">
 												<div class="=d-grid gap-2 d-md-flex" style="width:100px; margin-left:18px;">
-													<button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#updateItem' .$itemId. '">Edit</button>
+													<button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#updateItem' .$itemId. '">Edit</button>
 													<form action="partials/menuManage.php" method="POST">
 														<button name="removeItem" class="btn btn-sm btn-danger" style="margin-left:9px;">Delete</button>
 														<input type="hidden" name="itemId" value="'.$itemId. '">
@@ -130,25 +130,11 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="updateItem<?php echo $itemId; ?>">Item Id: <?php echo $itemId; ?></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-	  	<form action="partials/menuManage.php" method="post" enctype="multipart/form-data">
-		    <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
-		   		<div class="form-group col-md-8">
-					<b><label for="image">Image</label></b>
-					<input type="file" name="itemimage" id="itemimage" accept=".jpg" class="form-control" required style="border:none;" onchange="document.getElementById('itemPhoto').src = window.URL.createObjectURL(this.files[0])">
-					<small id="Info" class="form-text text-muted mx-3">Please .jpg file upload.</small>
-					<input type="hidden" id="itemId" name="itemId" value="<?php echo $itemId; ?>">
-					<button type="submit" class="btn btn-success my-1" name="updateItemPhoto">Update Img</button>
-				</div>
-				<div class="form-group col-md-4">
-					<img src="/PW_UTS_Ecomm/img/item-<?php echo $itemId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="item image" width="100" height="100">
-				</div>
-			</div>
-		</form>
 		<form action="partials/menuManage.php" method="post">
             <div class="text-left my-2">
                 <b><label for="name">Name</label></b>

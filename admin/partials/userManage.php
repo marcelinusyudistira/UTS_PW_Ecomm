@@ -1,5 +1,5 @@
 <?php
-    include 'dbCnnect.php';
+    include 'dbConnect.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $Id = $_POST["Id"];
         $sql = "DELETE FROM `users` WHERE `id`='$Id'";   
         $result = mysqli_query($conn, $sql);
-        echo "<script>alert('Removed');
+        echo "<script>alert('Berhasil menghapus user');
             window.location=document.referrer;
             </script>";
     }
@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $existSql);
         $numExistRows = mysqli_num_rows($result);
         if($numExistRows > 0){
-            echo "<script>alert('Username Already Exists');
+            echo "<script>alert('Username sudah pernah dipakai');
                     window.location=document.referrer;
                 </script>";
         }
@@ -37,11 +37,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql = "INSERT INTO `users` ( `username`, `firstName`, `lastName`, `email`, `phone`, `userType`, `password`, `joinDate`) VALUES ('$username', '$firstName', '$lastName', '$email', '$phone', '$userType', '$hash', current_timestamp())";   
                 $result = mysqli_query($conn, $sql);
                 if ($result){
-                    echo "<script>alert('Success');
+                    echo "<script>alert('Berhasil membuat user');
                             window.location=document.referrer;
                         </script>";
                 }else {
-                    echo "<script>alert('Failed');
+                    echo "<script>alert('Gagal membuat user');
                             window.location=document.referrer;
                         </script>";
                 }
@@ -64,12 +64,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `users` SET `firstName`='$firstName', `lastName`='$lastName', `email`='$email', `phone`='$phone', `userType`='$userType' WHERE `id`='$id'";   
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "<script>alert('update successfully');
+            echo "<script>alert('Update user berhasil');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Gagal mengupdate data user');
                 window.location=document.referrer;
                 </script>";
         }
@@ -85,11 +85,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $uploadfile = $uploaddir . $newfilename;
 
             if (move_uploaded_file($_FILES['userimage']['tmp_name'], $uploadfile)) {
-                echo "<script>alert('success');
+                echo "<script>alert('Berhasil mengupload foto');
                         window.location=document.referrer;
                     </script>";
             } else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Gagas mengupload foto');
                         window.location=document.referrer;
                     </script>";
             }
@@ -106,12 +106,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $filename = $_SERVER['DOCUMENT_ROOT']."/PW_UTS_Ecomm/img/person-".$id.".jpg";
         if (file_exists($filename)) {
             unlink($filename);
-            echo "<script>alert('Removed');
+            echo "<script>alert('Behasil menghapus user');
                 window.location=document.referrer;
             </script>";
         }
         else {
-            echo "<script>alert('no photo available.');
+            echo "<script>alert('Foto masih Kosong');
                 window.location=document.referrer;
             </script>";
         }
