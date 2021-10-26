@@ -1,13 +1,13 @@
 <?php
-                    $sql = "SELECT * FROM `sitedetail`";
-                    $result = mysqli_query($conn, $sql);
-                    $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT * FROM `sitedetail`";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 
-                    $sistemName = $row['sistemName'];
-                    $address = $row['address'];
-                    $email = $row['email'];
-                    $contact1 = $row['contact1'];
-                    $contact2 = $row['contact2'];
+    $sistemName = $row['sistemName'];
+    $address = $row['address'];
+    $email = $row['email'];
+    $contact1 = $row['contact1'];
+    $contact2 = $row['contact2'];
 
 echo '<div class="container-fluid" style="padding-left: 470px;margin-top:98px">
 	<div class="card col-lg-6 p-0">
@@ -17,7 +17,7 @@ echo '<div class="container-fluid" style="padding-left: 470px;margin-top:98px">
 		<div class="card-body">
 			<form action="partials/siteManage.php" method="post">
                 <div class="form-group">
-                    <label for="name" class="control-label">System Name</label>
+                    <label for="name" class="control-label">Nama Sistem</label>
                     <input type="text" class="form-control" id="name" name="name" value="' .$sistemName. '" required>
                 </div>
                 <div class="form-group">
@@ -29,11 +29,11 @@ echo '<div class="container-fluid" style="padding-left: 470px;margin-top:98px">
                     <input type="tel" class="form-control" id="contact1" name="contact1" value="' .$contact1. '" required>
                 </div>
                 <div class="form-group">
-                    <label for="contact" class="control-label">Contact-2(optional)</label>
+                    <label for="contact" class="control-label">Contact-2(jika diperlukan)</label>
                     <input type="tel" class="form-control" id="contact2" name="contact2" value="' .$contact2. '" required>
                 </div>
                 <div class="form-group">
-                    <label for="address" class="control-label">Address</label>
+                    <label for="address" class="control-label">Alamat</label>
                     <input type="text" class="form-control" id="address" name="address" value="' .$address. '" required>
                 </div>
                 <center>

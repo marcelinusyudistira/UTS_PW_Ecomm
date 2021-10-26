@@ -10,12 +10,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "UPDATE `orders` SET `orderStatus`='$status' WHERE `orderId`='$orderId'";   
         $result = mysqli_query($conn, $sql);
         if ($result){
-            echo "<script>alert('update successfully');
+            echo "<script>alert('Berhasil melakukan update');
                 window.location=document.referrer;
                 </script>";
         }
         else {
-            echo "<script>alert('failed');
+            echo "<script>alert('Gagal melakukan update');
                 window.location=document.referrer;
                 </script>";
         }
@@ -32,12 +32,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = mysqli_query($conn, $sql);
             $trackId = $conn->insert_id;
             if ($result){
-                echo "<script>alert('update successfully');
+                echo "<script>alert('Berhasil melakukan update');
                     window.location=document.referrer;
                     </script>";
             }
             else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Gagal melakukan update');
                     window.location=document.referrer;
                     </script>";
             }
@@ -46,12 +46,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $sql = "UPDATE `deliverydetails` SET `deliveryByName`='$name', `deliveryByPhone`='$phone', `deliveryTime`='$time',`dateTime`=current_timestamp() WHERE `id`='$trackId'";   
             $result = mysqli_query($conn, $sql);
             if ($result){
-                echo "<script>alert('update successfully');
+                echo "<script>alert('Berhasil melakukan update');
                     window.location=document.referrer;
                     </script>";
             }
             else {
-                echo "<script>alert('failed');
+                echo "<script>alert('Gagal melakukan update');
                     window.location=document.referrer;
                     </script>";
             }

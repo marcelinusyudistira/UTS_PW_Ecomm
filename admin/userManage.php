@@ -2,7 +2,7 @@
 	
 	<div class="row">
         <div class="col-lg-12">
-            <button class="btn btn-primary float-right btn-sm" data-toggle="modal" data-target="#newUser"><i class="fa fa-plus"></i> New user</button>
+            <button class="btn btn-primary float-right btn-sm" data-bs-toggle="modal" data-bs-target="#newUser"><i class="fa fa-plus"></i> New user</button>
         </div>
 	</div>
 	    <br>
@@ -55,7 +55,7 @@
                                         <div class="container">
                                             <div class="row" style="width:80px; margin-left:1px; margin-right:-50px;">
                                                 <div class="col-6">
-                                                <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editUser' .$Id. '" type="button">Edit</button> </div>';
+                                                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#editUser' .$Id. '" type="button">Edit</button> </div>';
                                                 if($Id == 1) {
                                                     echo '<div class="col-6">
                                                         <button class="btn btn-sm btn-danger" disabled style="margin-left:9px;">Delete</button>
@@ -88,7 +88,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="newUser">Create New User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -132,11 +132,11 @@
               </div>
               <div class="form-group">
                   <b><label for="password">Password:</label></b>
-                  <input class="form-control" id="password" name="password" placeholder="Enter Password" type="password" required data-toggle="password" minlength="4" maxlength="21">
+                  <input class="form-control" id="password" name="password" placeholder="Enter Password" type="password" required data-bs-toggle="password" minlength="4" maxlength="21">
               </div>
               <div class="form-group">
-                  <b><label for="password1">Renter Password:</label></b>
-                  <input class="form-control" id="cpassword" name="cpassword" placeholder="Renter Password" type="password" required data-toggle="password" minlength="4" maxlength="21">
+                  <b><label for="password1">Confirm Password:</label></b>
+                  <input class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" type="password" required data-bs-toggle="password" minlength="4" maxlength="21">
               </div>
               <button type="submit" name="createUser" class="btn btn-success">Submit</button>
             </form>
@@ -165,7 +165,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="editUser<?php echo $Id; ?>">User Id: <b><?php echo $Id; ?></b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -214,7 +214,7 @@
                         <b><label for="phone">Phone No:</label></b>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon">+91</span>
+                                <span class="input-group-text" id="basic-addon">+62</span>
                             </div>
                             <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $phone; ?>" required pattern="[0-9]{10}" maxlength="10">
                         </div>

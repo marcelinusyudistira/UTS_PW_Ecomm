@@ -36,7 +36,7 @@
 		left:0;
 		width:60%;
 		height: calc(100%);
-		background:#00000061;
+		background:#6097f0;
 		display: flex;
 		align-items: center;
 	}
@@ -64,7 +64,7 @@
     <main id="main" class=" bg-dark">
         <div id="login-left">
         <div class="logo">
-            <img src="/PW_UTS_Ecomm/img/sample_logo.png" alt="">
+            <img src="/PW_UTS_Ecomm/img/sample_logo.png" alt="" width="30px" height="30px">
         </div>
         </div>
         <div id="login-right">
@@ -90,8 +90,8 @@
     <?php
         if(isset($_GET['loginsuccess']) && $_GET['loginsuccess']=="false"){
         echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                <strong>Warning!</strong> Invalid Credentials
-                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+                    <strong>Perhatian!</strong> Masukkan Username dan Password dengan benar
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
         }
     ?>

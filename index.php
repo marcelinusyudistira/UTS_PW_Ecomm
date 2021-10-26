@@ -28,8 +28,8 @@
   <?php include 'partials/navbar.php'; ?>
 
   <!-- Category container starts here -->
+  <br>
   <div class="container my-3 mb-5">
-    <br><br>
     <div class="col-lg-2 text-center bg-light my-3"
       style="margin:auto;border-top: 2px groove black;border-bottom: 2px groove black;">
       <h2 class="text-center">Menu </h2>

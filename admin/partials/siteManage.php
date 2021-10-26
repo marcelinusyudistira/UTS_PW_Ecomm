@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $sql);
         
         if($result){
-            echo "<script>alert('success');
+            echo "<script>alert('Berhasil mengupdate sistem');
                 window.location=document.referrer;
                 </script>";
         }    

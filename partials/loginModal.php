@@ -1,4 +1,5 @@
 <!-- Login Modal -->
+<br><br>
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -20,7 +21,7 @@
           </div>
           <button type="submit" class="btn btn-success">Submit</button>
         </form>
-        <p class="mb-0 mt-1">Tidak memiliki Akun? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up now</a>.</p>
+        <p class="mb-0 mt-1">Tidak memiliki Akun? <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up Now</a>.</p>
       </div>
     </div>
   </div>

@@ -22,7 +22,6 @@
                     <th>Amount</th>						
                     <th>Payment Mode</th>
                     <th>Order Date</th>
-                    <th>Status</th>						
                     <th>Items</th>
                 </tr>
             </thead>
@@ -47,19 +46,17 @@
                         else {
                             $payment = "Online";
                         }
-                        $orderStatus = $row['orderStatus'];
                         $counter++;
                         
                         echo '<tr>
                                 <td>' . $orderId . '</td>
                                 <td>' . $Id . '</td>
-                                <td data-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>
+                                <td data-bs-toggle="tooltip" title="' .$address. '">' . substr($address, 0, 20) . '...</td>
                                 <td>' . $phone . '</td>
                                 <td>' . $amount . '</td>
                                 <td>' . $payment . '</td>
                                 <td>' . $orderDate . '</td>
-                                <td><a href="#" data-toggle="modal" data-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>
-                                <td><a href="#" data-toggle="modal" data-target="#orderItem' . $orderId . '" class="view" title="View Details"><i class="material-icons">&#xE5C8;</i></a></td>
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#orderItem' . $orderId . '" class="view" title="View Details"><i class="material-icons">&#xE5C8;</i></a></td>
                             </tr>';
                     }
                     if($counter==0) {
@@ -73,7 +70,6 @@
 
 <?php 
     include 'partials/orderItemModal.php';
-    include 'partials/orderStatusModal.php';
 ?>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -188,6 +184,6 @@
 
 <script>
 $(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-bs-toggle="tooltip"]').tooltip();
 });
 </script>

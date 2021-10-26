@@ -12,7 +12,7 @@
         <form action="partials/handleSignup.php" method="post">
           <div class="form-group">
               <b><label for="username">Username</label></b>
-              <input class="form-control" id="username" name="username" placeholder="Choose a unique Username" type="text" required minlength="3" maxlength="11">
+              <input class="form-control" id="username" name="username" placeholder="Gunakan username yang unik" type="text" required minlength="3" maxlength="11">
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">

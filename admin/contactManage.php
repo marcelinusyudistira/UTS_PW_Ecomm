@@ -1,6 +1,6 @@
-<div class="alert alert-info alert-dismissible fade show" role="alert" style="width:100%" id='notempty'>
-    <strong>Info!</strong> If problem is not related to the order then order id = 0	
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span></button>
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>Perhatian!</strong> Jika masalah tidak berkaitan dengan order manapun maka order id bernilai 0
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <style>
     .btn-danger-gradiant {
@@ -87,7 +87,7 @@
         <div class="modal-content">
           <div class="modal-header" style="background-color: rgb(111 202 203);">
             <h5 class="modal-title" id="reply<?php echo $contactId; ?>">Reply (Contact Id: <?php echo $contactId; ?>)</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>

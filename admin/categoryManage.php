@@ -68,7 +68,7 @@
                                             <div class="container">
                                                 <div class="row" style="width:80px">
                                                     <div class="col-6">
-                                                        <button class="btn btn-sm btn-primary edit_cat" type="button" data-toggle="modal" data-target="#updateCat' .$catId. '">Edit</button>
+                                                        <button class="btn btn-sm btn-primary edit_cat" type="button" data-bs-toggle="modal" data-bs-target="#updateCat' .$catId. '">Edit</button>
                                                         </div>
                                                         <div class="col-6">
                                                         <form action="partials/categoryManage.php" method="POST">
@@ -108,7 +108,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="updateCat<?php echo $catId; ?>">Category Id: <b><?php echo $catId; ?></b></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>

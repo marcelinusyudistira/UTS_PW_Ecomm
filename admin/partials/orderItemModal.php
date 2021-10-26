@@ -13,7 +13,7 @@
         <div class="modal-content">
             <div class="modal-header" style="background-color: rgb(111 202 203);">
                 <h5 class="modal-title" id="orderItem<?php echo $orderid; ?>">Order Items (<b>Order Id: <?php echo $orderid; ?></b>)</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -55,7 +55,7 @@
                                                     <div class="p-2">
                                                     <img src="/PW_UTS_Ecomm/img/item-'.$itemId. '.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                     <div class="ml-3 d-inline-block align-middle">
-                                                        <h5 class="mb-0"> '.$itemName. '</h5><span class="text-muted font-weight-normal font-italic d-block">Rs. ' .$itemPrice. '/-</span>
+                                                        <h5 class="mb-0"> '.$itemName. '</h5><span class="text-muted font-weight-normal font-italic d-block">Rp. ' .$itemPrice. '/-</span>
                                                     </div>
                                                     </div>
                                                 </th>

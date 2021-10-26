@@ -93,7 +93,7 @@
                                             </td>
                                             <td class="text-center">
 												<div class="=d-grid gap-2 d-md-flex" style="width:100px; margin-left:18px;">
-													<button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#updateItem' .$itemId. '">Edit</button>
+													<button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#updateItem' .$itemId. '">Edit</button>
 													<form action="partials/menuManage.php" method="POST">
 														<button name="removeItem" class="btn btn-sm btn-danger" style="margin-left:9px;">Delete</button>
 														<input type="hidden" name="itemId" value="'.$itemId. '">
@@ -130,7 +130,7 @@
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
         <h5 class="modal-title" id="updateItem<?php echo $itemId; ?>">Item Id: <?php echo $itemId; ?></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
