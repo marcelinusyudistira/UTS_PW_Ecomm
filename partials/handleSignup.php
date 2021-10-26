@@ -4,9 +4,6 @@ $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'dbConnect.php';
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\SMTP;
-
     require '../PHPMailer/src/Exception.php';
     require '../PHPMailer/src/OAuth.php';
     require '../PHPMailer/src/PHPMailer.php';
