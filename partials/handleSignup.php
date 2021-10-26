@@ -3,6 +3,16 @@ $showAlert = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'dbConnect.php';
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+
+    require '../PHPMailer/src/Exception.php';
+    require '../PHPMailer/src/OAuth.php';
+    require '../PHPMailer/src/PHPMailer.php';
+    require '../PHPMailer/src/POP3.php';
+    require '../PHPMailer/src/SMTP.php';
+
     $username = $_POST["username"];
     $firstName = $_POST["firstName"];
     $lastName = $_POST["lastName"];
@@ -19,19 +29,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         header("Location: /PW_UTS_Ecomm/index.php?signupsuccess=false&error=$showError");
     }
     else{
-      if(($password == $cpassword)){
-          $hash = password_hash($password, PASSWORD_DEFAULT);
-          $sql = "INSERT INTO `users` ( `username`, `firstName`, `lastName`, `email`, `phone`, `password`, `joinDate`) VALUES ('$username', '$firstName', '$lastName', '$email', '$phone', '$hash', current_timestamp())";   
-          $result = mysqli_query($conn, $sql);
-          if ($result){
-              $showAlert = true;
-              header("Location: /PW_UTS_Ecomm/index.php?signupsuccess=true");
-          }
-      }
-      else{
-          $showError = "Passwords do not match";
-          header("Location: /PW_UTS_Ecomm/index.php?signupsuccess=false&error=$showError");
-      }
+        if(($password == $cpassword)){
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+            $timestamp = current_timestamp();
+            $sql = "INSERT INTO `users` ( `username`, `firstName`, `lastName`, `email`, `phone`, `password`, `joinDate`) VALUES ('$username', '$firstName', '$lastName', '$email', '$phone', '$hash', '$timestamp')";   
+            $result = mysqli_query($conn, $sql);
+            if ($result){
+                $cmail = new PHPMailer;
+                $cmail->setFrom('from@example.com', 'TUMBAS E-Commerce System Mail');
+                $cmail->addAddress(email, username);
+                $cmail->Subject  = 'Konfirmasi Registrasi Akun';
+                $cmail->Body = '<p>Silahkan verifikasi melalui link ini <a href="'.$_SERVER['SERVER_NAME'].'/partials/handleMailConfirm.php?confirm='.$timestamp.'">'.$_SERVER['SERVER_NAME'].'/partials/handleMailConfirm.php?confirm='.$timestamp.'</a></p>';
+                if(!$cmail->send()) {
+                    echo 'Mailer error: ' . $cmail->ErrorInfo;
+                } else {
+                    echo 'Register sukses silahkan login.';
+                }
+
+                $showAlert = true;
+                header("Location: /PW_UTS_Ecomm/index.php?signupsuccess=true");
+            }
+        }
+        else{
+            $showError = "Passwords do not match";
+            header("Location: /PW_UTS_Ecomm/index.php?signupsuccess=false&error=$showError");
+        }
     }
 }
     

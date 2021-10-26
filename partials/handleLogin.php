@@ -10,7 +10,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if ($num == 1){
         $row=mysqli_fetch_assoc($result);
         $userId = $row['id'];
-        if (password_verify($password, $row['password'])){ 
+        $userConfirm = $row['confirm'];
+        if (password_verify($password, $row['password']) && ($userConfirm == 1)){ 
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $username;
