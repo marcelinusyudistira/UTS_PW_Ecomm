@@ -7,7 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Your Order</title>
@@ -160,8 +161,7 @@
                         <th>Phone No</th>
                         <th>Amount</th>						
                         <th>Payment Mode</th>
-                        <th>Order Date</th>
-                        <th>Status</th>						
+                        <th>Order Date</th>						
                         <th>Items</th>
                     </tr>
                 </thead>
@@ -184,7 +184,6 @@
                             else {
                                 $paymentMode = "Online";
                             }
-                            $orderStatus = $row['orderStatus'];
                             
                             $counter++;
                             
@@ -195,8 +194,7 @@
                                     <td>' . $amount . '</td>
                                     <td>' . $paymentMode . '</td>
                                     <td>' . $orderDate . '</td>
-                                    <td><a href="#" data-toggle="modal" data-target="#orderStatus' . $orderId . '" class="view"><i class="material-icons">&#xE5C8;</i></a></td>
-                                    <td><a href="#" data-toggle="modal" data-target="#orderItem' . $orderId . '" class="view" title="View Details"><i class="material-icons">&#xE5C8;</i></a></td>
+                                    <td><a href="#" data-bs-toggle="modal" data-bs-target="#orderItem' . $orderId . '" class="view" title="View Details"><i class="material-icons">&#xE5C8;</i></a></td>
                                     
                                 </tr>';
                         }
@@ -222,7 +220,6 @@
 
     <?php 
     include 'partials/orderItemModal.php';
-    include 'partials/orderStatusModal.php';
     require 'partials/footer.php';?> 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -27,14 +27,6 @@
     <?php include 'partials/dbConnect.php';?>
     <?php require 'partials/navbar.php' ?>
 
-    <div>&nbsp;
-        <br>
-        <a href="index.php" class="active text-dark">
-            <i class="fas fa-qrcode"></i>
-            <span>All Category</span>
-        </a>
-    </div>
-
     <?php
         $id = $_GET['catid'];
         $sql = "SELECT * FROM `categories` WHERE categoryId = $id";

@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = mysqli_query($conn, $existSql);
         $numExistRows = mysqli_num_rows($result);
         if($numExistRows > 0){
-            echo "<script>alert('Item Already Added.');
+            echo "<script>alert('Item sudah pernah ditambahkan.');
                     window.history.back(1);
                     </script>";
         }
@@ -29,14 +29,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $itemId = $_POST["itemId"];
         $sql = "DELETE FROM `viewcart` WHERE `itemId`='$itemId' AND `userId`='$userId'";   
         $result = mysqli_query($conn, $sql);
-        echo "<script>alert('Removed');
+        echo "<script>alert('Item berhasil dihapus');
                 window.history.back(1);
             </script>";
     }
     if(isset($_POST['removeAllItem'])) {
         $sql = "DELETE FROM `viewcart` WHERE `userId`='$userId'";   
         $result = mysqli_query($conn, $sql);
-        echo "<script>alert('Removed All');
+        echo "<script>alert('Semua item berhasil dihapus');
                 window.history.back(1);
             </script>";
     }
@@ -68,14 +68,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
                 $deletesql = "DELETE FROM `viewcart` WHERE `userId`='$userId'";   
                 $deleteresult = mysqli_query($conn, $deletesql);
-                echo '<script>alert("Thanks for ordering with us. Your order id is ' .$orderId. '.");
+                echo '<script>alert("Terimakasih telah melakukan order. Order id anda adalah ' .$orderId. '.");
                     window.location.href="http://localhost:8080/PW_UTS_Ecomm/index.php";  
                     </script>';
                     exit();
             }
         } 
         else{
-            echo '<script>alert("Incorrect Password! Please enter correct Password.");
+            echo '<script>alert("Password yang dimasukkan salah");
                     window.history.back(1);
                     </script>';
                     exit();
@@ -83,7 +83,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
     {
-        $pizzaId = $_POST['itemId'];
+        $itemId = $_POST['itemId'];
         $qty = $_POST['quantity'];
         $updatesql = "UPDATE `viewcart` SET `itemQuantity`='$qty' WHERE `itemId`='$itemId' AND `userId`='$userId'";
         $updateresult = mysqli_query($conn, $updatesql);

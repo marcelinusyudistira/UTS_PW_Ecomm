@@ -43,9 +43,10 @@
     ?>
     
     <div class="container" id="cont">
+        <br>
         <div class="row">
             <div class="alert alert-info mb-0" style="width: -webkit-fill-available;">
-              <strong>Info!</strong> online payment are currently disabled so please choose cash on delivery.
+              <strong>Info!</strong> Saat ini hanya tersedia metode COD
             </div>
             <div class="col-lg-12 text-center border rounded bg-light my-3">
                 <h1>Keranjang Saya</h1>
@@ -145,11 +146,6 @@
                 </div>
                 <div class="mb-3">
                     <div class="pt-4">
-                        <a class="dark-grey-text d-flex justify-content-between" style="text-decoration: none; color: #050607;" data-toggle="collapse" href="#collapseExample"
-                            aria-expanded="false" aria-controls="collapseExample">
-                            Add a discount code (optional)
-                            <span><i class="fas fa-chevron-down pt-1"></i></span>
-                        </a>
                         <div class="collapse" id="collapseExample">
                             <div class="mt-3">
                                 <div class="md-form md-outline mb-0">
@@ -169,7 +165,7 @@
     else {
         echo '<div class="container" style="min-height : 610px;">
         <div class="alert alert-info my-3">
-            <font style="font-size:22px"><center>Before checkout you need to <strong><a class="alert-link" data-toggle="modal" data-target="#loginModal">Login</a></strong></center></font>
+            <font style="font-size:22px"><center>Sebelum Checkout anda harus <strong><a class="alert-link" data-toggle="modal" data-target="#loginModal">Login</a></strong></center></font>
         </div></div>';
     }
     ?>

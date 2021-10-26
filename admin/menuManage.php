@@ -135,20 +135,6 @@
         </button>
       </div>
       <div class="modal-body">
-	  	<form action="partials/menuManage.php" method="post" enctype="multipart/form-data">
-		    <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
-		   		<div class="form-group col-md-8">
-					<b><label for="image">Image</label></b>
-					<input type="file" name="itemimage" id="itemimage" accept=".jpg" class="form-control" required style="border:none;" onchange="document.getElementById('itemPhoto').src = window.URL.createObjectURL(this.files[0])">
-					<small id="Info" class="form-text text-muted mx-3">Please .jpg file upload.</small>
-					<input type="hidden" id="itemId" name="itemId" value="<?php echo $itemId; ?>">
-					<button type="submit" class="btn btn-success my-1" name="updateItemPhoto">Update Img</button>
-				</div>
-				<div class="form-group col-md-4">
-					<img src="/PW_UTS_Ecomm/img/item-<?php echo $itemId; ?>.jpg" id="itemPhoto" name="itemPhoto" alt="item image" width="100" height="100">
-				</div>
-			</div>
-		</form>
 		<form action="partials/menuManage.php" method="post">
             <div class="text-left my-2">
                 <b><label for="name">Name</label></b>

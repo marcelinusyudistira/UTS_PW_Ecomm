@@ -15,6 +15,9 @@
 
     <title>Contact Us</title>
 
+      <!-- Vendor CSS Files -->
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+
     <style>
        .icon-badge-group .icon-badge-container {
           display: inline-block;
@@ -143,7 +146,7 @@
                         <?php if($loggedin){ ?>
                           <div class="col-lg-4">
                             <div class="icon-badge-container mx-1" style="padding-left: 167px;">
-                              <a href="#" data-toggle="modal" data-target="#adminReply"><i class="far fa-envelope icon-badge-icon"></i></a>
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#adminReply"><i class="far fa-envelope icon-badge-icon"></i></a>
                               <div class="icon-badge"><b><span id="totalMessage">0</span></b></div>
                             </div>
                           </div>
@@ -197,7 +200,7 @@
                           <?php if($loggedin){ ?>
                             <div class="col-lg-12">
                               <button type="submit" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3"><span> KIRIM <i class="ti-arrow-right"></i></span></button>
-                              <button type="button" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3 mx-2" data-toggle="modal" data-target="#history"><span> HISTORY <i class="ti-arrow-right"></i></span></button>
+                              <button type="button" class="btn btn-danger-gradiant mt-3 mb-3 text-white border-0 py-2 px-3 mx-2" data-bs-toggle="modal" data-bs-target="#history"><span> HISTORY <i class="ti-arrow-right"></i></span></button>
                             </div>
                           <?php }else { ?>
                             <div class="col-lg-12">
@@ -248,7 +251,7 @@
           <div class="modal-content">
             <div class="modal-header" style="background-color: rgb(187 188 189);">
               <h5 class="modal-title" id="adminReply">Admin Reply</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -269,7 +272,7 @@
                     while($row=mysqli_fetch_assoc($result)) {
                         $contactId = $row['contactId'];
                         $message = $row['message'];
-                        $datetime = $row['datetime'];
+                        $datetime = $row['dateTime'];
                         $count++;
                         echo '<tr>
                                 <td>' .$contactId. '</td>
@@ -295,7 +298,7 @@
           <div class="modal-content">
             <div class="modal-header" style="background-color: rgb(187 188 189);">
               <h5 class="modal-title" id="history">Your Sent Message</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -345,8 +348,15 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>         
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+      <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
   
   </body>
 </html>

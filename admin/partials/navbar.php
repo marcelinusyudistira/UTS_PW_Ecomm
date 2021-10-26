@@ -35,7 +35,7 @@
                     </a>
                     <a href="index.php?page=contactManage" class="nav__link nav-contactManage">
                       <i class="fas fa-hands-helping"></i>
-                      <span class="nav__name">contact Info</span>
+                      <span class="nav__name">Contact Info</span>
                     </a>
                     <a href="index.php?page=userManage" class="nav__link nav-userManage">
                       <i class='bx bx-user nav__icon' ></i>
