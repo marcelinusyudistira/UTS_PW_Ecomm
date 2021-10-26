@@ -4,11 +4,11 @@ $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     include 'dbConnect.php';
 
-    require '../PHPMailer/src/Exception.php';
-    require '../PHPMailer/src/OAuth.php';
-    require '../PHPMailer/src/PHPMailer.php';
-    require '../PHPMailer/src/POP3.php';
-    require '../PHPMailer/src/SMTP.php';
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/OAuth.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/POP3.php';
+    require 'PHPMailer/src/SMTP.php';
 
     $username = $_POST["username"];
     $firstName = $_POST["firstName"];
